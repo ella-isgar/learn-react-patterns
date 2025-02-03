@@ -13,9 +13,10 @@ const TemperatureConverter = () => {
 
   // Goal is to reduce the size of this component.
   // Divide this component into 2 components.
-  // 1 for taking in inputs and 1 for displaying the new temperature.
+  // 1 generic component that takes in inputs (the celsius)
+  // 1 genergic component for displaying some information (the fahrenheit)
   // In order to do this, both of these new, smaller components will
-  // need access to this parent state.
+  // need access to this parent state. --> we will lift the state.
   return (
     <div>
       <label>
