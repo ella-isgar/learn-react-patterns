@@ -1,6 +1,7 @@
-import React, { useState, ChangeEvent } from 'react';
+import React, { useState, ChangeEvent } from "react";
 
 const TemperatureConverter = () => {
+  // We define state here:
   const [temperature, setTemperature] = useState<number>(0); // State is managed within this component
 
   // Event handler with the correct type for ChangeEvent
@@ -10,6 +11,11 @@ const TemperatureConverter = () => {
 
   const temperatureInFahrenheit = ((temperature * 9) / 5 + 32).toFixed(2);
 
+  // Goal is to reduce the size of this component.
+  // Divide this component into 2 components.
+  // 1 for taking in inputs and 1 for displaying the new temperature.
+  // In order to do this, both of these new, smaller components will
+  // need access to this parent state.
   return (
     <div>
       <label>
